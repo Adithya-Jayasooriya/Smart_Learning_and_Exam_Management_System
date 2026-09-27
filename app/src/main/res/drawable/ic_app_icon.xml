@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Educational app icon: open book + graduation cap on an indigo gradient -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Rounded square background with a diagonal indigo gradient -->
+    <path android:pathData="M10,0 L38,0 Q48,0 48,10 L48,38 Q48,48 38,48 L10,48 Q0,48 0,38 L0,10 Q0,0 10,0 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="0" android:startY="0"
+                android:endX="48" android:endY="48">
+                <item android:offset="0" android:color="#4361EE" />
+                <item android:offset="1" android:color="#3A0CA3" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Graduation cap: mortarboard -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,8 L38,13 L24,18 L10,13 Z" />
+
+    <!-- Tassel cord + bead in the accent colour -->
+    <path
+        android:fillColor="#4CC9F0"
+        android:pathData="M37.2,13 L38.8,13 L38.8,22 L37.2,22 Z" />
+    <path
+        android:fillColor="#4CC9F0"
+        android:pathData="M38,23 m-1.6,0 a1.6,1.6 0 1,0 3.2,0 a1.6,1.6 0 1,0 -3.2,0" />
+
+    <!-- Open book: left and right pages -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,26 C19,23 13,23 8,24.5 L8,38 C13,36.5 19,36.5 24,39 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,26 C29,23 35,23 40,24.5 L40,38 C35,36.5 29,36.5 24,39 Z" />
+
+    <!-- Page text lines -->
+    <path android:strokeColor="#A9B8F5" android:strokeWidth="0.9"
+        android:pathData="M11.5,29.5 C15,28.9 18.5,28.9 21.5,29.7" />
+    <path android:strokeColor="#A9B8F5" android:strokeWidth="0.9"
+        android:pathData="M11.5,32.5 C15,31.9 18.5,31.9 21.5,32.7" />
+    <path android:strokeColor="#A9B8F5" android:strokeWidth="0.9"
+        android:pathData="M26.5,29.7 C29.5,28.9 33,28.9 36.5,29.5" />
+    <path android:strokeColor="#A9B8F5" android:strokeWidth="0.9"
+        android:pathData="M26.5,32.7 C29.5,31.9 33,31.9 36.5,32.5" />
+</vector>
