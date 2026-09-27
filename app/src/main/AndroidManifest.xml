@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Camera permission is not needed: the Google ML Kit document scanner
+         runs inside Google Play services with its own camera UI. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <application
+        android:name=".data.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_app_icon"
+        android:label="Smart Learning"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/ic_app_icon"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.MyCameraFinal" >
+
+        <!-- Entry point -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".RegisterActivity" android:exported="false" />
+
+        <!-- Dashboards -->
+        <activity android:name=".StudentDashboardActivity" android:exported="false" />
+        <activity android:name=".LecturerDashboardActivity" android:exported="false" />
+        <activity android:name=".AdminDashboardActivity" android:exported="false" />
+
+        <!-- Shared / student -->
+        <activity android:name=".SubjectListActivity" android:exported="false" />
+        <activity android:name=".MaterialListActivity" android:exported="false" />
+        <activity android:name=".ExamListActivity" android:exported="false" />
+        <activity android:name=".ResultsActivity" android:exported="false" />
+        <activity android:name=".NotificationsActivity" android:exported="false" />
+        <activity android:name=".ChangePasswordActivity" android:exported="false" />
+        <activity android:name=".ScanAnswerActivity" android:exported="false" />
+
+        <!-- Lecturer -->
+        <activity android:name=".UploadMaterialActivity" android:exported="false" />
+        <activity android:name=".CreateExamActivity" android:exported="false" />
+        <activity android:name=".SubmissionsActivity" android:exported="false" />
+
+        <!-- Admin -->
+        <activity android:name=".ManageUsersActivity" android:exported="false" />
+        <activity android:name=".AddSubjectActivity" android:exported="false" />
+        <activity android:name=".AddLecturerActivity" android:exported="false" />
+        <activity android:name=".ReportsActivity" android:exported="false" />
+
+        <!-- Shares copied files (papers / answer sheets / materials) with viewer apps -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

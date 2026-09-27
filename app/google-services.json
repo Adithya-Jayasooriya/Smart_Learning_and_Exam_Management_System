@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "480066346180",
+    "project_id": "smart-learning-dcebc",
+    "storage_bucket": "smart-learning-dcebc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480066346180:android:fd497276b9375de1cf3d91",
+        "android_client_info": {
+          "package_name": "com.example.mycamerafinal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLuh4jtJALChc5qxk7mkpfK5Ra4ZLPkKE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
