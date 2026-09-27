@@ -1,0 +1,74 @@
+/* Smart Learning — lecturer portal (matches the Android app's colors) */
+:root {
+    --primary: #4361EE;
+    --primary-dark: #3A0CA3;
+    --accent: #4CC9F0;
+    --bg: #EEF1FB;
+    --card: #FFFFFF;
+    --text: #1E293B;
+    --text2: #5B6478;
+    --stroke: #E2E8F0;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", Roboto, Arial, sans-serif; background: var(--bg); color: var(--text); }
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+
+header { background: var(--primary); color: #fff; padding: 14px 0; }
+header .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+header h1 { font-size: 18px; margin: 0; display: flex; align-items: center; }
+
+/* The small round ← back button shown on inner pages (exams, submissions). */
+header .back { display: inline-flex; align-items: center; justify-content: center;
+               width: 32px; height: 32px; margin-right: 10px; border-radius: 50%;
+               background: rgba(255,255,255,.18); color: #fff; text-decoration: none;
+               font-size: 18px; line-height: 1; }
+header .back:hover { background: rgba(255,255,255,.35); }
+header nav a { color: #fff; text-decoration: none; margin-left: 14px; font-weight: 600; }
+header nav a:hover { text-decoration: underline; }
+header .who { margin-left: 14px; opacity: .85; }
+header .logout { opacity: .85; }
+
+main { padding: 24px 16px 48px; }
+h2 { margin-top: 28px; }
+.sub { color: var(--text2); }
+
+.cards { display: flex; gap: 14px; flex-wrap: wrap; margin: 18px 0; }
+.card { background: var(--card); border: 1px solid var(--stroke); border-radius: 14px; padding: 18px 22px;
+        min-width: 180px; color: var(--text2); font-weight: 600; }
+.card .num { display: block; font-size: 30px; color: var(--primary); font-weight: 800; }
+.card.highlight { border-color: var(--primary); }
+
+table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 12px; overflow: hidden;
+        border: 1px solid var(--stroke); }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--stroke); font-size: 14px; }
+th { background: #F6F8FE; color: var(--text2); }
+tr:last-child td { border-bottom: none; }
+
+.form-card { background: var(--card); border: 1px solid var(--stroke); border-radius: 14px; padding: 20px;
+             display: grid; gap: 14px; max-width: 560px; }
+label { display: grid; gap: 6px; font-size: 14px; font-weight: 600; color: var(--text2); }
+input, select { padding: 10px 12px; border: 1px solid #CBD5E1; border-radius: 10px; font-size: 14px; width: 100%; }
+input:focus, select:focus { outline: 2px solid var(--primary); border-color: var(--primary); }
+input.marks { width: 90px; }
+.grade-form { display: flex; gap: 8px; align-items: center; margin: 0; }
+
+button, .btn { display: inline-block; background: var(--primary); color: #fff; border: none; border-radius: 10px;
+               padding: 11px 20px; font-size: 14px; font-weight: 700; cursor: pointer; text-decoration: none; }
+button:hover, .btn:hover { background: var(--primary-dark); }
+.btn.small { padding: 7px 12px; font-size: 13px; }
+
+.badge { padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+.badge.submitted { background: #FFF3CD; color: #8A6D00; }
+.badge.graded { background: #D1F5EF; color: #0B7A6C; }
+
+.ok { background: #D1F5EF; color: #0B7A6C; padding: 10px 14px; border-radius: 10px; }
+.error { background: #FDE2E2; color: #B42318; padding: 10px 14px; border-radius: 10px; }
+.empty { color: var(--text2); }
+
+/* Login page */
+.login-page { display: flex; min-height: 100vh; align-items: center; justify-content: center; }
+.login-card { background: var(--card); border: 1px solid var(--stroke); border-radius: 18px; padding: 34px;
+              width: 100%; max-width: 380px; display: grid; gap: 8px; }
+.login-card h1 { margin: 0; color: var(--primary); }
+.login-card form { display: grid; gap: 14px; margin-top: 10px; }

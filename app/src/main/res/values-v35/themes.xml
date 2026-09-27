@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Android 15+ forces apps targeting SDK 35 to draw edge-to-edge, which pushed
+         our content under the status bar on new phones. Opt out so every screen is
+         laid out below the status bar / above the navigation bar, exactly like on
+         older Android versions. -->
+    <style name="Theme.MyCameraFinal" parent="Base.Theme.MyCameraFinal">
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
+    </style>
+</resources>

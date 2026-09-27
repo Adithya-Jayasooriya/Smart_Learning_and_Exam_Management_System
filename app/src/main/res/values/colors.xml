@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ALL COLOURS OF THE APP LIVE IN THIS ONE FILE.
+    Every layout, drawable and theme refers to these names (@color/primary etc.),
+    so changing a value HERE changes it everywhere in the app at once.
+
+    ★ VIVA TIP — "change the button colour":
+      All blue buttons use "primary" below. Change #4361EE to another hex
+      colour (e.g. #E91E63 for pink, #2E7D32 for green), rebuild, done.
+      A hex colour is #RRGGBB (red, green, blue, each 00–FF).
+-->
+<resources>
+    <!-- Legacy (kept so old screens still resolve) -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Smart Learning design system -->
+    <color name="primary">#4361EE</color>        <!-- ★ main blue: ALL buttons, action bar, links -->
+    <color name="primary_dark">#3A0CA3</color>   <!-- darker blue: the status bar at the very top -->
+    <color name="accent">#4CC9F0</color>         <!-- light blue: highlights (e.g. selected date) -->
+    <color name="success">#2EC4B6</color>        <!-- green: success states -->
+    <color name="bg">#EEF1FB</color>             <!-- light grey-blue: background of every screen -->
+    <color name="card">#FFFFFFFF</color>         <!-- white: card / input field backgrounds -->
+    <color name="text_primary">#1E293B</color>   <!-- near-black: main text -->
+    <color name="text_secondary">#5B6478</color> <!-- grey: hints and secondary text -->
+    <color name="field_stroke">#CBD5E1</color>   <!-- light grey: border line of input fields -->
+    <color name="card_stroke">#E2E8F0</color>    <!-- light grey: border line of cards -->
+</resources>

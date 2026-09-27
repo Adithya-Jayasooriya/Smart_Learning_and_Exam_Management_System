@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    THE APP THEME — global styling rules applied to every screen.
+    Colours themselves are defined in colors.xml; this file says WHERE
+    each colour is used and how buttons look by default.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- The main theme. All screens use it (set in AndroidManifest.xml).
+         On Android 15+ a small override in res/values-v35/themes.xml is
+         added on top of this to keep content below the status bar. -->
+    <style name="Base.Theme.MyCameraFinal" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primary</item>              <!-- action bar colour -->
+        <item name="colorPrimaryDark">@color/primary_dark</item>     <!-- status bar colour -->
+        <item name="colorAccent">@color/accent</item>                <!-- checkboxes, highlights -->
+        <item name="android:windowBackground">@color/bg</item>       <!-- every screen's background -->
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:buttonStyle">@style/AppButton</item>     <!-- ALL buttons use AppButton -->
+        <item name="android:editTextColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_secondary</item>
+        <!-- Popup (AlertDialog) buttons: without this, the app-wide AppButton
+             style bled into dialogs on some phones and made OK/Cancel
+             white-on-white (invisible) — e.g. the "Save & publish" button
+             of the grading popup. -->
+        <item name="alertDialogTheme">@style/AppAlertDialog</item>
+        <item name="android:alertDialogTheme">@style/AppAlertDialog</item>
+    </style>
+
+    <!-- Theme for every popup dialog: visible blue OK/Cancel text buttons. -->
+    <style name="AppAlertDialog" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="colorAccent">@color/primary</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PickerDialogButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/PickerDialogButton</item>
+        <item name="buttonBarNeutralButtonStyle">@style/PickerDialogButton</item>
+        <item name="buttonBarButtonStyle">@style/PickerDialogButton</item>
+        <item name="android:buttonBarButtonStyle">@style/PickerDialogButton</item>
+        <item name="android:buttonStyle">@style/PickerDialogButton</item>
+    </style>
+
+    <!-- Overridden in values-v35 to keep content clear of the system bars on Android 15+. -->
+    <style name="Theme.MyCameraFinal" parent="Base.Theme.MyCameraFinal" />
+
+    <!-- Date/time picker dialogs. The app-wide AppButton style bled into the
+         framework dialogs and made OK/Cancel white-on-white (invisible), so the
+         pickers get their own theme with explicitly colored flat buttons. -->
+    <style name="PickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/primary</item>               <!-- selected date circle -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:buttonStyle">@style/PickerDialogButton</item>
+        <item name="android:buttonBarButtonStyle">@style/PickerDialogButton</item>
+        <item name="buttonBarButtonStyle">@style/PickerDialogButton</item>
+    </style>
+
+    <!-- Flat blue text buttons (OK / Cancel) used inside the picker dialogs. -->
+    <style name="PickerDialogButton" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:minWidth">64dp</item>
+    </style>
+
+    <!-- Rounded, filled primary button applied app-wide.
+         ★ Button COLOUR comes from btn_primary.xml → @color/primary.
+         ★ Button TEXT colour / size / padding can be changed right here. -->
+    <style name="AppButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/btn_primary</item> <!-- blue rounded shape -->
+        <item name="android:textColor">@color/white</item>           <!-- button text colour -->
+        <item name="android:textAllCaps">false</item>                <!-- keep normal case -->
+        <item name="android:textStyle">bold</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+</resources>
