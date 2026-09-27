@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    THE LOOK OF EVERY BUTTON in the app (applied app-wide by the AppButton
+    style in res/values/themes.xml).
+
+    ★ To change the BUTTON COLOUR: edit "primary" in res/values/colors.xml.
+    ★ To change how ROUNDED the corners are: change the 14dp radius below.
+
+    <ripple> adds the light touch-feedback animation when the button is
+    pressed; inside it is the actual shape: a rectangle filled with the
+    primary colour and rounded corners.
+-->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#33FFFFFF">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/primary" />   <!-- ★ button fill colour -->
+            <corners android:radius="14dp" />          <!-- ★ corner roundness -->
+        </shape>
+    </item>
+</ripple>
